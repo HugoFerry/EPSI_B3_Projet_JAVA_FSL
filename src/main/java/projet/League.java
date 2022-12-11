@@ -10,6 +10,12 @@ public class League {
 	int draw;
 	int points;
 	
-
-
+	League(String season){
+		this.season = season;
+	}
+	
+	League(String season, Club club){
+		this.season = season;
+		this.club = club;
+	}
 }
