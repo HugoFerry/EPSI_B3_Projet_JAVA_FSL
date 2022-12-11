@@ -18,4 +18,9 @@ public class League {
 		this.season = season;
 		this.club = club;
 	}
+	
+	League(String season, int ranking){
+		this.season = season;
+		this.ranking = ranking;
+	}
 }
