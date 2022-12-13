@@ -38,8 +38,10 @@ public class Main {
     		System.out.println("| 1. All Clubs List in Ligue1 for 2002 - 2022 |");
     		System.out.println("| 2. All Stats                                |");
     		System.out.println("| 3. Specific Club Stat                       |");
-    		System.out.println("| 4                                           |");
-    		System.out.println("| 5                                           |");
+    		System.out.println("| 4. Specific Club Stat in Specific Season    |");
+    		System.out.println("| 5. The Highest Points                       |");
+    		System.out.println("| 6. The Least Lost Club                      |");
+    		System.out.println("| 7. The Most Won Club                        |");
     		System.out.println("-----------------------------------------------");
 
     		System.out.printf("-> ");
