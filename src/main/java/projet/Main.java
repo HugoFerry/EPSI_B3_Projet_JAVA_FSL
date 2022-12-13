@@ -3,6 +3,8 @@ package projet;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.Scanner;
+import java.util.concurrent.TimeUnit;
 
 public class Main {
 	public static void main(String[] args) {
@@ -19,8 +21,84 @@ public class Main {
     		String d_result="";
     		String l_result="";
     		String pts_result="";
+    		Scanner chooseMenu = new Scanner(System.in);
+       		
+    
+    		// Program Part
+    		League league_season_club = new League("2002-2003",Club.Paris_Saint_Germain);
+    		
+    		System.out.println("-------------------------------------------------------");
+    		System.out.println("-        Welcome to Ligue1 Stats (2002 - 2022)        -");
+    		System.out.println("-------------------------------------------------------");
+    		System.out.println();
+    		System.out.println("Choose a number that you want to know about");
+    		System.out.println();
 
-    		League league = new League("2002-2003",Club.Paris_Saint_Germain);
+    		System.out.println("<MENU>-----------------------------------------");
+    		System.out.println("| 1. All Clubs List in Ligue1 for 2002 - 2022 |");
+    		System.out.println("| 2. All Stats                                |");
+    		System.out.println("| 3. Specific Club Stat                       |");
+    		System.out.println("| 4                                           |");
+    		System.out.println("| 5                                           |");
+    		System.out.println("-----------------------------------------------");
+
+    		System.out.printf("-> ");
+    		try {
+        		int chosenNum = chooseMenu.nextInt();
+        		
+
+        		
+        		switch (chosenNum) {
+        			case 1:
+        				System.out.println("///////////////////////");
+        				Club.allClubList().forEach(System.out::println);
+        				System.out.println("///////////////////////");
+        				TimeUnit.SECONDS.sleep(20);
+        				main(args);
+        				
+        			case 2:
+        				try {
+        	    			reader = new BufferedReader(new FileReader(file));
+        	    			while((line = reader.readLine()) != null) {
+        	    				String[] row = line.split(",");
+        	    				for (String index :  row) {
+        							System.out.printf("%-25s", index);						
+        	    					}
+        	    					System.out.println();
+        	    					}
+        						System.out.println("------------------------------------------------------------------------------------------------------------------------------------------------------------");
+
+                				TimeUnit.SECONDS.sleep(600);
+                				main(args);
+        	    		}
+        	    		catch(Exception e) {
+        	    			e.printStackTrace();
+        	    		}
+        	    		finally {
+        	    			try {
+        	    				reader.close();
+        	    			} catch (IOException e) {
+        	    				e.printStackTrace();
+        	    			}
+        	    		}
+        				
+        				
+        			case 3:
+        				
+	
+        			}
+        		
+        		}
+        		
+  			
+  			catch(Exception e) {
+  			  System.out.println("ERROR >>> Please insert only number, not string");
+  			  System.out.println("Program Restarted ...");
+  			  main(args);
+  			}
+    		
+
+ 
     		
     		
     		try {
@@ -29,7 +107,7 @@ public class Main {
     				
     				String[] row = line.split(",");
     				
-    				if(row[0].contains(league.season) && row[2].contains(league.club.getValue())) {
+    				if(row[0].contains(league_season_club.season) && row[2].contains(league_season_club.club.getValue())) {
     					season_result = row[0];
     					rk_result = row[1];
     					club_result = row[2];
@@ -48,11 +126,15 @@ public class Main {
     			try {
     				reader.close();
     			} catch (IOException e) {
-    				// TODO Auto-generated catch block
     				e.printStackTrace();
     			}
     		}
+
+    		// Program Part
+    		System.out.println("In " + league_season_club.season + " season, " + league_season_club.club.getValue() + " was ranked in " + rk_result);
+
     	}
+    	
     }
 
     

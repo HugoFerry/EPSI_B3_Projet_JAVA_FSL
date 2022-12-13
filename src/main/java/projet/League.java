@@ -14,6 +14,10 @@ public class League {
 		this.season = season;
 	}
 	
+	League(Club club){
+		this.club = club;
+	}
+	
 	League(String season, Club club){
 		this.season = season;
 		this.club = club;

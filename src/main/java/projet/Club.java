@@ -1,5 +1,7 @@
 package projet;
 
+import java.util.stream.Stream;
+
 public enum Club {
 	Lyon("Lyon"),
 	Monaco("Monaco"),
@@ -56,6 +58,10 @@ public enum Club {
     @Override
     public String toString() {
         return this.getValue();
+    }
+    
+    public static Stream<Club> allClubList() {
+        return Stream.of(Club.values()); 
     }
 
 
