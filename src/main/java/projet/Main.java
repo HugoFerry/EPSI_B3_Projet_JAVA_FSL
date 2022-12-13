@@ -64,11 +64,11 @@ public class Main {
         	    			while((line = reader.readLine()) != null) {
         	    				String[] row = line.split(",");
         	    				for (String index :  row) {
-        							System.out.printf("%-25s", index);						
+        							System.out.printf("%-23s", index);						
         	    					}
         	    					System.out.println();
         	    					}
-        						System.out.println("------------------------------------------------------------------------------------------------------------------------------------------------------------");
+        						System.out.println("-------------------------------------------------------------------------------------------------------------------------------------------------------------------");
 
                 				TimeUnit.SECONDS.sleep(600);
                 				main(args);
