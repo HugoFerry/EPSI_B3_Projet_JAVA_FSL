@@ -55,7 +55,7 @@ public class Main {
         				System.out.println("///////////////////////");
         				Club.allClubList().forEach(System.out::println);
         				System.out.println("///////////////////////");
-        				TimeUnit.SECONDS.sleep(20);
+        				TimeUnit.SECONDS.sleep(5);
         				main(args);
         				
         			case 2:
@@ -70,7 +70,7 @@ public class Main {
         	    					}
         						System.out.println("-------------------------------------------------------------------------------------------------------------------------------------------------------------------");
 
-                				TimeUnit.SECONDS.sleep(600);
+                				TimeUnit.SECONDS.sleep(5);
                 				main(args);
         	    		}
         	    		catch(Exception e) {
@@ -83,10 +83,81 @@ public class Main {
         	    				e.printStackTrace();
         	    			}
         	    		}
-        				
-        				
         			case 3:
-        				
+        				try {
+        	        		System.out.println("Type the Club name that you want (Lyon, Monaco, Bordeaux, Paris_Saint_Germain...)");
+        	        		System.out.println("-> ");
+
+        	        		Scanner chooseClub = new Scanner(System.in);
+        	        		String chosenClub = chooseClub.next();
+        	  
+        	        		
+        	        		League specific_club = new League(Club.valueOf(chosenClub));
+            	        			
+        	        		
+        	        		System.out.println(specific_club);
+        	        	        	        		
+        	    			reader = new BufferedReader(new FileReader(file));
+    	    				
+        	    			float sum_rank =0;
+        	    			float total_appearance=0;
+        	    			float sum_win =0;
+        	    			float sum_draw =0;
+        	    			float sum_lose =0;
+        	    			
+        	    			System.out.println("STATS---------------------------------------------------------");
+        	    			while((line = reader.readLine()) != null) {
+        	    				
+        	    				String[] row = line.split(",");
+        	    				
+        	    				if(row[2].contains(specific_club.club.getValue())) {
+        	    					season_result = row[0];
+        	    					rk_result = row[1];
+        	    					club_result = row[2];
+        	    					mp_result = row[3];
+        	    					w_result = row[4];
+        	    					d_result = row[5];
+        	    					l_result = row[6];
+        	    					pts_result = row[7];
+        	    					
+        	    					total_appearance+=1;
+        	    					sum_rank+=Float.parseFloat(rk_result);
+        	    					sum_win+=Float.parseFloat(w_result);
+        	    					sum_draw+=Float.parseFloat(d_result);
+        	    					sum_lose+=Float.parseFloat(l_result);
+        	    					
+        	    					System.out.println("In " + season_result + " season, " +specific_club.club.getValue() + " was ranked in " + rk_result +". During " + mp_result + " games, " + specific_club.club.getValue() + " won " + w_result + " games," + d_result + " games in draw, and " + l_result +" games lost");
+        	    				}
+        	    			}
+        	    			float rank_average =sum_rank/total_appearance;
+        	    			float win_average = sum_win/total_appearance;
+        	    			float draw_average = sum_draw/total_appearance;
+        	    			float lose_average = sum_lose/total_appearance;
+        	    			System.out.println("--------------------------------------------------------------");
+        	    			
+        	        		System.out.println("-------------------");
+        	        		System.out.println("|     Summary     |");        	        		
+        	        		System.out.println("-------------------");
+        	        		System.out.println("For 20 seasons, " + specific_club.club.getValue() + " had appeared " + (int)(total_appearance) + " times in Ligue 1");
+        	        		System.out.println("The average rank is " + rank_average + " th");
+        	        		System.out.println("The average won games are " + win_average + " games");
+        	        		System.out.println("The average drawn games are " + draw_average + " games");
+        	        		System.out.println("The average lost games are " + lose_average + " games");
+        	        		
+            				TimeUnit.SECONDS.sleep(5);
+            				main(args);
+
+        	    		}
+        	    		catch(Exception e) {
+        	    			System.out.println("<"+e.toString()+">" + " error occured. Please write the correct club name. Put '1' if you want to show all the clubs");
+        	    		}
+        	    		finally {
+        	    			try {
+        	    				reader.close();
+        	    			} catch (IOException e) {
+        	    				e.printStackTrace();
+        	    			}
+        	    		}
 	
         			}
         		
@@ -98,46 +169,10 @@ public class Main {
   			  System.out.println("Program Restarted ...");
   			  main(args);
   			}
-    		
-
- 
-    		
-    		
-    		try {
-    			reader = new BufferedReader(new FileReader(file));
-    			while((line = reader.readLine()) != null) {
-    				
-    				String[] row = line.split(",");
-    				
-    				if(row[0].contains(league_season_club.season) && row[2].contains(league_season_club.club.getValue())) {
-    					season_result = row[0];
-    					rk_result = row[1];
-    					club_result = row[2];
-    					mp_result = row[3];
-    					w_result = row[4];
-    					d_result = row[5];
-    					l_result = row[6];
-    					pts_result = row[7];
-    				}
-    			}
-    		}
-    		catch(Exception e) {
-    			e.printStackTrace();
-    		}
-    		finally {
-    			try {
-    				reader.close();
-    			} catch (IOException e) {
-    				e.printStackTrace();
-    			}
-    		}
-
-    		// Program Part
-    		System.out.println("In " + league_season_club.season + " season, " + league_season_club.club.getValue() + " was ranked in " + rk_result);
-
     	}
     	
     }
+
 
     
 }
