@@ -1,5 +1,8 @@
 package projet;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class League {
 	Club club;
 	int ranking;
@@ -9,6 +12,9 @@ public class League {
 	int lose;
 	int draw;
 	int points;
+
+	public static Map < Integer, Integer > map_league = new HashMap <> ();
+   
 	
 	League(String season){
 		this.season = season;
