@@ -48,8 +48,6 @@ public class Main {
     		try {
         		int chosenNum = chooseMenu.nextInt();
         		
-
-        		
         		switch (chosenNum) {
         			case 1:
         				System.out.println("///////////////////////");
@@ -91,12 +89,8 @@ public class Main {
         	        		Scanner chooseClub = new Scanner(System.in);
         	        		String chosenClub = chooseClub.next();
         	  
-        	        		
         	        		League specific_club = new League(Club.valueOf(chosenClub));
-            	        			
-        	        		
-        	        		System.out.println(specific_club);
-        	        	        	        		
+            	        			        	        	        		
         	    			reader = new BufferedReader(new FileReader(file));
     	    				
         	    			float sum_rank =0;
@@ -146,7 +140,6 @@ public class Main {
         	        		
             				TimeUnit.SECONDS.sleep(5);
             				main(args);
-
         	    		}
         	    		catch(Exception e) {
         	    			System.out.println("<"+e.toString()+">" + " error occured. Please write the correct club name. Put '1' if you want to show all the clubs");
@@ -158,7 +151,64 @@ public class Main {
         	    				e.printStackTrace();
         	    			}
         	    		}
-	
+        			case 4:
+        				try {
+        	        		System.out.println("Type the Club name that you want (Lyon, Monaco, Bordeaux, Paris_Saint_Germain...)");
+        	        		System.out.println("-> ");
+
+        	        		Scanner chooseClub = new Scanner(System.in);
+        	        		String chosenClub = chooseClub.next();
+        	        		
+           	        		System.out.println("Type the Season you want (2002-2003, ... , 2021-2022)");
+        	        		System.out.println("-> ");        	  
+        	        		
+        	        		Scanner chooseSeason = new Scanner(System.in);
+        	        		String chosenSeason = chooseSeason.next();
+        	        		
+        	        		League specific_club_in_specific_season = new League(chosenSeason, Club.valueOf(chosenClub));
+            	        			        	        	        		
+        	    			reader = new BufferedReader(new FileReader(file));
+    	    				
+        	    			System.out.println("STATS---------------------------------------------------------");
+        	    			while((line = reader.readLine()) != null) {
+        	    				
+        	    				String[] row = line.split(",");
+        	    				
+        	    				if(row[0].contains(specific_club_in_specific_season.season) & row[2].contains(specific_club_in_specific_season.club.getValue())) {
+        	    					season_result = row[0];
+        	    					rk_result = row[1];
+        	    					club_result = row[2];
+        	    					mp_result = row[3];
+        	    					w_result = row[4];
+        	    					d_result = row[5];
+        	    					l_result = row[6];
+        	    					pts_result = row[7];
+        	    					
+                	        		System.out.println("-------------------");
+                	        		System.out.println("|     Summary     |");        	        		
+                	        		System.out.println("-------------------");
+        	    					System.out.println("In " + season_result + " season, " +specific_club_in_specific_season.club.getValue() + " was ranked in " + rk_result +". During " + mp_result + " games, " + specific_club_in_specific_season.club.getValue() + " won " + w_result + " games, " + d_result + " games in draw, and " + l_result +" games in lost.");
+        	    					
+        	    					int champion_rank=Integer.parseInt(rk_result);
+        	    					if(champion_rank == 1) {
+        	    						System.out.println("In this season, "+specific_club_in_specific_season.club.getValue()+" was champion in Ligue 1 !!!");
+        	    					}
+        	    				}
+        	    			}
+        	        		
+            				TimeUnit.SECONDS.sleep(5);
+            				main(args);
+        	    		}
+        	    		catch(Exception e) {
+        	    			System.out.println("<"+e.toString()+">" + " error occured. Please write the correct club name and season (ex) 'Lyon' & '2002-2003'). Put '1' if you want to show all the clubs");
+        	    		}
+        	    		finally {
+        	    			try {
+        	    				reader.close();
+        	    			} catch (IOException e) {
+        	    				e.printStackTrace();
+        	    			}
+        	    		}
         			}
         		
         		}
