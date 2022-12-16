@@ -67,8 +67,46 @@ Choose a number that you want to know about
 | 7. The Most Won Club                        |
 -----------------------------------------------
 ```
-
 Choisir l'option que vous voulez parmis celles proposées afin de voir les statistiques qui en ressortent.
+
+Exemple :
+
+```
+-> 3
+Type the Club name that you want (Lyon, Monaco, Bordeaux, Paris_Saint_Germain...)
+-> Paris_Saint_Germain
+STATS---------------------------------------------------------
+In 2002-2003 season, Paris_Saint_Germain was ranked in 11. During 38 games, Paris_Saint_Germain won 14 games,12 games in draw, and 12 games lost
+In 2003-2004 season, Paris_Saint_Germain was ranked in 2. During 38 games, Paris_Saint_Germain won 22 games,10 games in draw, and 6 games lost
+In 2004-2005 season, Paris_Saint_Germain was ranked in 9. During 38 games, Paris_Saint_Germain won 12 games,15 games in draw, and 11 games lost
+In 2005-2006 season, Paris_Saint_Germain was ranked in 9. During 38 games, Paris_Saint_Germain won 13 games,13 games in draw, and 12 games lost
+In 2006-2007 season, Paris_Saint_Germain was ranked in 15. During 38 games, Paris_Saint_Germain won 12 games,12 games in draw, and 14 games lost
+In 2007-2008 season, Paris_Saint_Germain was ranked in 16. During 38 games, Paris_Saint_Germain won 10 games,13 games in draw, and 15 games lost
+In 2008-2009 season, Paris_Saint_Germain was ranked in 6. During 38 games, Paris_Saint_Germain won 19 games,7 games in draw, and 12 games lost
+In 2009-2010 season, Paris_Saint_Germain was ranked in 13. During 38 games, Paris_Saint_Germain won 12 games,11 games in draw, and 15 games lost
+In 2010-2011 season, Paris_Saint_Germain was ranked in 4. During 38 games, Paris_Saint_Germain won 15 games,15 games in draw, and 8 games lost
+In 2011-2012 season, Paris_Saint_Germain was ranked in 2. During 38 games, Paris_Saint_Germain won 23 games,10 games in draw, and 5 games lost
+In 2012-2013 season, Paris_Saint_Germain was ranked in 1. During 38 games, Paris_Saint_Germain won 25 games,8 games in draw, and 5 games lost
+In 2013-2014 season, Paris_Saint_Germain was ranked in 1. During 38 games, Paris_Saint_Germain won 27 games,8 games in draw, and 3 games lost
+In 2014-2015 season, Paris_Saint_Germain was ranked in 1. During 38 games, Paris_Saint_Germain won 24 games,11 games in draw, and 3 games lost
+In 2015-2016 season, Paris_Saint_Germain was ranked in 1. During 38 games, Paris_Saint_Germain won 30 games,6 games in draw, and 2 games lost
+In 2016-2017 season, Paris_Saint_Germain was ranked in 2. During 38 games, Paris_Saint_Germain won 27 games,6 games in draw, and 5 games lost
+In 2017-2018 season, Paris_Saint_Germain was ranked in 1. During 38 games, Paris_Saint_Germain won 29 games,6 games in draw, and 3 games lost
+In 2018-2019 season, Paris_Saint_Germain was ranked in 1. During 38 games, Paris_Saint_Germain won 29 games,4 games in draw, and 5 games lost
+In 2019-2020 season, Paris_Saint_Germain was ranked in 1. During 27 games, Paris_Saint_Germain won 22 games,2 games in draw, and 3 games lost
+In 2020-2021 season, Paris_Saint_Germain was ranked in 2. During 38 games, Paris_Saint_Germain won 26 games,4 games in draw, and 8 games lost
+In 2021-2022 season, Paris_Saint_Germain was ranked in 1. During 38 games, Paris_Saint_Germain won 26 games,8 games in draw, and 4 games lost
+--------------------------------------------------------------
+-------------------
+|     Summary     |
+-------------------
+For 20 seasons, Paris_Saint_Germain had appeared 20 times in Ligue 1
+The average rank is 4.95 th
+The average won games are 20.85 games
+The average drawn games are 9.05 games
+The average lost games are 7.55 games
+-------------------------------------------------------
+```
 
 ## Hooks
 
@@ -77,9 +115,9 @@ Choisir l'option que vous voulez parmis celles proposées afin de voir les stati
 * Troisième Hooks : description
 
 ## Tests
-
-* Premier test : description et comment le lancer
-* Deuxième test : description et comment le lancer
+### (description et comment le lancer)
+* Premier test : test_All_Club_Numbers() 
+* Deuxième test : test_First_Club()
 
 ## Fabriqué avec
 
