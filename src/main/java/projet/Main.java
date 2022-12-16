@@ -68,9 +68,9 @@ public class Main {
         		
         		switch (chosenNum) {
         			case 1:
-        				System.out.println("///////////////////////");
+        				System.out.println("-----------------------------------------------");
         				Club.allClubList().forEach(System.out::println);
-        				System.out.println("///////////////////////");
+        				System.out.println("-----------------------------------------------");
         				TimeUnit.SECONDS.sleep(5);
         				main(args);
         				
