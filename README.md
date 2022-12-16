@@ -67,6 +67,8 @@ Choose a number that you want to know about
 | 7. The Most Won Club                        |
 -----------------------------------------------
 ```
+Choisir l'option que vous voulez parmis celles proposées afin de voir les statistiques qui en ressortent.
+
 Example :
 
 ```
@@ -105,7 +107,6 @@ The average drawn games are 9.05 games
 The average lost games are 7.55 games
 -------------------------------------------------------
 ```
-Choisir l'option que vous voulez parmis celles proposées afin de voir les statistiques qui en ressortent.
 
 ## Hooks
 
