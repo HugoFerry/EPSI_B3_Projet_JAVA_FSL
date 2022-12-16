@@ -6,7 +6,7 @@ Application permettant de voir différentes statistiques sur les saisons de ligu
 
 ## Description
 
-Nous sommes une équipe de trois développeurs en étude en troisième année au sein de EPSI Bordeaux.
+Nous sommes une équipe de trois développeurs en étude de troisième année au sein de EPSI Bordeaux.
 Ce projet a vu le jour grâce à une évaluation d'intégration Java demandée par notre professeur de Java.
 
 Notre application permet à toute personne qui l'utilise, de voir certaines statistiques à propos des saisons de ligue 1 de football français depuis 2002.
