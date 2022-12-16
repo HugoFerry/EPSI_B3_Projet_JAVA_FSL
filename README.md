@@ -25,10 +25,11 @@ Nous avons déjà pensé à certaines améliorations, comme augmenter la périod
 4. [Pré-requis](#pr-requis)
 5. [Installation et Démarrage](#installation-et-dmarrage)
 6. [Hooks](#hooks)
-7. [Fabriqué avec](#fabriqu-avec)
-8. [Versions](#versions)
-9. [Auteurs](#auteurs)
-10. [License](#license)
+7. [Tests](#tests)
+8. [Fabriqué avec](#fabriqu-avec)
+9. [Versions](#versions)
+10. [Auteurs](#auteurs)
+11. [License](#license)
 
 ## Pour commencer
 
