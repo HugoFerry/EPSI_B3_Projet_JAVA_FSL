@@ -69,7 +69,7 @@ Choose a number that you want to know about
 ```
 Choisir l'option que vous voulez parmis celles proposées afin de voir les statistiques qui en ressortent.
 
-Example :
+Exemple :
 
 ```
 -> 3
