@@ -114,9 +114,9 @@ Choisir l'option que vous voulez parmis celles proposées afin de voir les stati
 * Troisième Hooks : description
 
 ## Tests
-
-* Premier test : description et comment le lancer
-* Deuxième test : description et comment le lancer
+### (description et comment le lancer)
+* Premier test : test_All_Club_Numbers() 
+* Deuxième test : test_First_Club()
 
 ## Fabriqué avec
 
