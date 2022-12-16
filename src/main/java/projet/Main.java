@@ -41,9 +41,6 @@ public class Main {
     		
     		Scanner chooseMenu = new Scanner(System.in);
        		
-    		
-    		
-    
     		// Program Part
     		League league_season_club = new League("2002-2003",Club.Paris_Saint_Germain);
     		
@@ -78,30 +75,8 @@ public class Main {
         				main(args);
         				
         			case 2:
-        				try {
-        	    			reader = new BufferedReader(new FileReader(file));
-        	    			while((line = reader.readLine()) != null) {
-        	    				String[] row = line.split(",");
-        	    				for (String index :  row) {
-        							System.out.printf("%-23s", index);						
-        	    					}
-        	    					System.out.println();
-        	    					}
-        						System.out.println("-------------------------------------------------------------------------------------------------------------------------------------------------------------------");
-
-                				TimeUnit.SECONDS.sleep(5);
-                				main(args);
-        	    		}
-        	    		catch(Exception e) {
-        	    			e.printStackTrace();
-        	    		}
-        	    		finally {
-        	    			try {
-        	    				reader.close();
-        	    			} catch (IOException e) {
-        	    				e.printStackTrace();
-        	    			}
-        	    		}
+        				Record.Stats(args);
+        				
         			case 3:
         				try {
         	        		System.out.println("Type the Club name that you want (Lyon, Monaco, Bordeaux, Paris_Saint_Germain...)");

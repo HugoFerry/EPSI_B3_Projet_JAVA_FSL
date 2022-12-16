@@ -20,7 +20,7 @@ public class League {
 		this.season = season;
 	}
 	
-	League(Club club){
+	public League(Club club){
 		this.club = club;
 	}
 	

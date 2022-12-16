@@ -64,5 +64,5 @@ public enum Club {
         return Stream.of(Club.values()); 
     }
 
-
+    
 }
