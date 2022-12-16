@@ -434,7 +434,7 @@ public class Main {
         			}
         		}
   			catch(Exception e) {
-  			  System.out.println("ERROR >>> Please insert only number, not string");
+  			  System.out.println("ERROR >>>  insert only number, not string");
   			  System.out.println("Program Restarted ...");
   			  main(args);
   			}
