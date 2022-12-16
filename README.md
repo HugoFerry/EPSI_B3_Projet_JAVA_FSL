@@ -114,10 +114,10 @@ The average lost games are 7.55 games
 * Deuxième Hooks : description
 * Troisième Hooks : description
 
-## Tests
+## Tests (JUnit)
 ### (description et comment le lancer)
-* Premier test : test_All_Club_Numbers() 
-* Deuxième test : test_First_Club()
+* Premier test : test_All_Club_Numbers() - Compter et vérifier le nombre de clubs au total
+* Deuxième test : test_First_Club() - Vérifier le premier club dans enum Club
 
 ## Fabriqué avec
 
