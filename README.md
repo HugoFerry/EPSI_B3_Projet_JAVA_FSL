@@ -110,9 +110,10 @@ The average lost games are 7.55 games
 
 ## Hooks
 
-* Premier Hooks : description
-* Deuxième Hooks : description
-* Troisième Hooks : description
+* Premier Hooks : Commit_msg :
+      Permet de déterminer si notre message n'est pas nul, ça l'affiche, le nombre de caractère de notre commit, de vérifier si le nombre de caractère est pair et le reste. 
+* Deuxième Hooks : PrePush :
+      Vérifie que le le message du push est bien celui donné, si non ne push pas.
 
 ## Tests (JUnit)
 ### (description et comment le lancer)
