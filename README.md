@@ -101,4 +101,4 @@ Lisez la liste des [contributeurs](https://github.com/HugoFerry/EPSI_B3_Projet_J
 
 ## License
 
-Ce projet est sous licence ``MIT`` - voir le fichier [LICENSE.md](LICENSE.md) pour plus d'informations
+Ce projet est sous licence ``GPL`` - voir le fichier [LICENSE.md](LICENSE.md) pour plus d'informations
