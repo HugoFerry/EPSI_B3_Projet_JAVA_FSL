@@ -88,7 +88,7 @@ Choisir l'option que vous voulez parmis celles proposées afin de voir les stati
 ## Versions
 
 * **Dernière version stable :** 0
-* **Dernière version :** 1.0
+* **Dernière version :** 0
 * Liste des versions : [Cliquer pour afficher](https://github.com/HugoFerry/EPSI_B3_Projet_JAVA_FSL/tags)
 
 ## Auteurs
